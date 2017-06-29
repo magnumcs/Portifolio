@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/branco</item>
+        <item name="android:alertDialogTheme">@style/AppTheme.Dark.Dialog.InfoPessoa</item>
+
+    </style>
+    <style name="SplashScream" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Dialog.MinWidth">
+        <item name="colorAccent">@color/colorIntervalo</item>
+        <item name="background">@color/branco</item>
+        <item name="android:colorBackground">@color/branco</item>
+        <item name="android:windowBackground">@drawable/timepicker</item>
+
+
+    </style>
+
+    <style name="AppTheme.Dark.Dialog.InfoPessoa" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/branco</item>
+        <item name="android:textColorPrimary">@color/branco</item>
+        <item name="android:background">@color/colorIntervalo</item>
+    </style>
+
+    <style name="AppTheme.Dark.Dialog.Info" parent="Theme.AppCompat.Dialog.MinWidth">
+        <item name="colorAccent">@color/branco</item>
+        <item name="android:textColorPrimary">@color/branco</item>
+        <item name="android:background">@color/colorIntervalo</item>
+    </style>
+
+
+
+
+</resources>
