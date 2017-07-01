@@ -1,0 +1,10 @@
+"pt-BR":
+  messages:
+    confirm: Tem certeza?
+    listing: Listando
+    error_contact: impedindo o contato de ser salvo
+
+    contact:
+      created: Contato criado com sucesso!
+      updated: Contato atualizado com sucesso!
+      destroyed: Contato removido com sucesso!
