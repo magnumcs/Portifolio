@@ -1,0 +1,84 @@
+var appCliente = angular.module("appCliente", []);
+
+	appCliente.controller("indexController", function($scope, $http) {
+		$scope.clientes = [];
+		$scope.cliente = {};
+		
+		listarClientes = function(){
+			$http({
+				method:'GET',
+				url:'http://localhost:8080/apiweb/clientes'
+			}).then(function(response) {
+				$scope.clientes = response.data;
+				console.log(response.data);
+				console.log(response.status);
+			}, 
+			function(response) {
+				console.log(response.data);
+				console.log(response.status);
+			});
+		};
+		
+		$scope.cadastrarCliente = function(){
+			$http({
+				method:'POST',
+				url:'http://localhost:8080/apiweb/clientes',
+				data:$scope.cliente
+			}).then(function(response) {
+				listarClientes();
+				$scope.limparCliente();
+				console.log(response.data);
+				console.log(response.status);
+			}, 
+			function(response) {
+				console.log(response.data);
+				console.log(response.status);
+			});
+		};
+		
+		$scope.excluirCliente = function(cliente){
+			$http({
+				method:'DELETE',
+				url:'http://localhost:8080/apiweb/clientes/' + cliente.id,
+			}).then(function(response) {
+				$scope.clientes.pop(response.cliente);
+				$scope.listarClientes();
+				console.log(response.data);
+				console.log(response.status);
+			}, 
+			function(response) {
+				console.log(response.data);
+				console.log(response.status);
+			});
+		};
+		
+		$scope.recuperaCliente = function(cliente) {
+			$scope.cliente = angular.copy(cliente);
+		};
+		
+		$scope.cancelarAlteracaoCliente = function() {
+			$scope.cliente = {};
+		};
+		
+		$scope.limparCliente = function() {
+			$scope.cliente = {};
+		};
+		
+		/*
+		$scope.alterarCliente = function(cliente){
+			$http({
+				method:'PUT',
+				url:'http://localhost:8080/apiweb/clientes/' + cliente.id,
+			}).then(function(response) {
+				pos = clientes.indexof(cliente);
+				$scope.clientes.splice(pos, 1);
+			}, 
+			function(response) {
+				console.log(response.data);
+				console.log(response.status);
+			});
+		};*/
+		
+		listarClientes();
+		
+	});

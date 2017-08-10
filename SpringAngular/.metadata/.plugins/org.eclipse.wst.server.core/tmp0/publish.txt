@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Mon Jan 02 23:10:57 AMST 2017
+org.eclipse.jst.jee.server\:apiweb=/home/magnum/Documents/Development/Tools/SpringTools/sts-bundle/pivotal-tc-server-developer-3.2.0.RELEASE/base-instance/wtpwebapps/apiweb
+org.eclipse.jst.jee.server\:/binary\:/home/magnum/.m2/repository/org/springframework/spring-web/4.3.4.RELEASE/spring-web-4.3.4.RELEASE.jar=/home/magnum/Documents/Development/Tools/SpringTools/sts-bundle/pivotal-tc-server-developer-3.2.0.RELEASE/base-instance/wtpwebapps/apiweb/WEB-INF/lib/spring-web-4.3.4.RELEASE.jar

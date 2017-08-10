@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="appCliente">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Sistema de Clientes</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<script src="./js/app.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+		<script src="./js/controller/cliente-controller.js"></script>
+		<script src="./js/controller/cidade-controller.js"></script>
+		<script src="./js/controller/estado-controller.js"></script>
+	</head>
+	<body>
+	
+		<a href="/#/clientes">Clientes</a>
+		<div ng-view="ng-view">
+		
+		</div>
+	
+	
+	</body>
+</html>

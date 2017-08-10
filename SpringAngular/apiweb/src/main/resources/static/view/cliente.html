@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<form ng-validate name="frmCliente">
+
+	<div>
+		<input name="txtNome" type="text" ng-model="cliente.nome" required/>
+		<span ng-show="frmCliente.txtNome.$erro.required">Campo nome obrigatorio</span>
+	</div>
+	<div>
+		<button ng-click="cadastrarCliente()" ng-disabled="frmCliente.$invalid">Salvar</button>
+		<button ng-click="cancelarCliente(cli)">Cancelar</button>
+	</div>
+	<div>
+		<fieldset>
+			<legend>Formulario</legend>
+			Valid: {{frmCliente.txtNome.$valid}}
+		</fieldset>
+	</div>
+</form>
+
+<div ng-repeat="cli in clientes">
+	<p>
+		{{cli.id + " - " + cli.nome}}
+		<button ng-click="excluirCliente(cli)">Excluir</button>
+		<button ng-click="recuperarCliente(cli)">Alterar</button>
+		<a href="clientes/{{cli.id}}"><button>Detalhes</button></a>
+	</p>
+</div>
